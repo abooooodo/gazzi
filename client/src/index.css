@@ -3,57 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
-
 :root {
   --radius: 16px;
   
-  /* الألوان الأساسية - أزرق عصري جريء */
+  /* الألوان الأساسية */
   --primary: oklch(0.32 0.18 260);
   --primary-foreground: oklch(0.98 0.01 0);
-  
-  /* اللون الثانوي - برتقالي حيوي */
   --accent: oklch(0.65 0.25 45);
   --accent-foreground: oklch(0.98 0.01 0);
-  
-  /* الخلفيات والحدود */
   --background: oklch(0.98 0.01 0);
   --foreground: oklch(0.15 0.02 260);
   --card: oklch(0.99 0.01 0);
@@ -62,22 +19,16 @@
   --input: oklch(0.98 0.01 0);
   --muted: oklch(0.88 0.01 260);
   --muted-foreground: oklch(0.45 0.02 260);
-  
-  /* ألوان إضافية */
   --secondary: oklch(0.45 0.15 260);
   --secondary-foreground: oklch(0.98 0.01 0);
   --destructive: oklch(0.63 0.25 30);
   --destructive-foreground: oklch(0.98 0.01 0);
   --ring: oklch(0.32 0.18 260);
-  
-  /* ألوان الرسوم البيانية */
   --chart-1: oklch(0.32 0.18 260);
   --chart-2: oklch(0.65 0.25 45);
   --chart-3: oklch(0.55 0.20 150);
   --chart-4: oklch(0.70 0.20 30);
   --chart-5: oklch(0.50 0.15 280);
-  
-  /* Sidebar */
   --sidebar: oklch(0.98 0.01 0);
   --sidebar-foreground: oklch(0.15 0.02 260);
   --sidebar-primary: oklch(0.32 0.18 260);
@@ -86,6 +37,8 @@
   --sidebar-accent-foreground: oklch(0.98 0.01 0);
   --sidebar-border: oklch(0.92 0.01 260);
   --sidebar-ring: oklch(0.32 0.18 260);
+  --popover: oklch(0.99 0.01 0);
+  --popover-foreground: oklch(0.15 0.02 260);
 }
 
 .dark {
@@ -108,7 +61,6 @@
   --ring: oklch(0.55 0.20 260);
 }
 
-/* ==================== Global Styles ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +85,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ==================== Typography ==================== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -182,7 +133,6 @@ a:focus-visible {
   border-radius: 4px;
 }
 
-/* ==================== Layout Classes ==================== */
 .container {
   width: 100%;
   max-width: 1280px;
@@ -202,7 +152,6 @@ a:focus-visible {
   }
 }
 
-/* ==================== Section Styles ==================== */
 .section-modern {
   padding: 3rem 0;
   position: relative;
@@ -215,7 +164,6 @@ a:focus-visible {
   }
 }
 
-/* ==================== Card Styles ==================== */
 .card-modern {
   background: var(--card);
   border: 2px solid var(--border);
@@ -243,7 +191,6 @@ a:focus-visible {
   transform: translateY(-4px);
 }
 
-/* ==================== Button Styles ==================== */
 .btn-modern {
   display: inline-flex;
   align-items: center;
@@ -284,7 +231,6 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* ==================== Text Gradient ==================== */
 .text-gradient {
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
@@ -292,7 +238,6 @@ a:focus-visible {
   background-clip: text;
 }
 
-/* ==================== Heading Modern ==================== */
 .heading-modern {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 900;
@@ -300,13 +245,11 @@ a:focus-visible {
   color: var(--foreground);
 }
 
-/* ==================== Divider ==================== */
 .divider-accent {
   background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
   border-radius: 999px;
 }
 
-/* ==================== Hover Lift Effect ==================== */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -316,7 +259,6 @@ a:focus-visible {
   box-shadow: 0 25px 50px rgba(50, 100, 200, 0.2);
 }
 
-/* ==================== Animations ==================== */
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -357,15 +299,6 @@ a:focus-visible {
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
 .animate-slide-in-up {
   animation: slideInUp 0.6s ease-out;
 }
@@ -378,7 +311,6 @@ a:focus-visible {
   animation: fadeIn 0.6s ease-out;
 }
 
-/* ==================== Form Styles ==================== */
 input, textarea, select {
   font-family: inherit;
   font-size: 1rem;
@@ -400,7 +332,6 @@ input::placeholder, textarea::placeholder {
   color: var(--muted-foreground);
 }
 
-/* ==================== Scrollbar Styles ==================== */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -420,19 +351,16 @@ input::placeholder, textarea::placeholder {
   background: var(--accent);
 }
 
-/* ==================== Selection Styles ==================== */
 ::selection {
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
 
-/* ==================== Focus Visible ==================== */
 :focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-/* ==================== Accessibility ==================== */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -445,7 +373,6 @@ input::placeholder, textarea::placeholder {
   border-width: 0;
 }
 
-/* ==================== Skip to Content Link ==================== */
 .skip-to-content {
   position: absolute;
   top: -40px;
@@ -462,7 +389,6 @@ input::placeholder, textarea::placeholder {
   top: 0;
 }
 
-/* ==================== Responsive Typography ==================== */
 @media (max-width: 640px) {
   body {
     font-size: 14px;
@@ -490,7 +416,6 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-/* ==================== Print Styles ==================== */
 @media print {
   body {
     background: white;
@@ -506,7 +431,6 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-/* ==================== Reduced Motion ==================== */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -515,7 +439,6 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-/* ==================== High Contrast Mode ==================== */
 @media (prefers-contrast: more) {
   .card-modern {
     border-width: 3px;
