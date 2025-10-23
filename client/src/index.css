@@ -141,28 +141,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
   font-weight: 800;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   font-weight: 700;
 }
 
 h4 {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 700;
 }
 
 p {
   margin-bottom: 1rem;
   line-height: 1.8;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 a {
@@ -203,14 +204,14 @@ a:focus-visible {
 
 /* ==================== Section Styles ==================== */
 .section-modern {
-  padding: 4rem 0;
+  padding: 3rem 0;
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .section-modern {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -248,10 +249,10 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.875rem;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -293,7 +294,7 @@ a:focus-visible {
 
 /* ==================== Heading Modern ==================== */
 .heading-modern {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 900;
   line-height: 1.1;
   color: var(--foreground);
@@ -468,15 +469,24 @@ input::placeholder, textarea::placeholder {
   }
   
   h1 {
-    font-size: 1.75rem;
-  }
-  
-  h2 {
     font-size: 1.5rem;
   }
   
-  h3 {
+  h2 {
     font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  .heading-modern {
+    font-size: 1.75rem;
+  }
+  
+  .btn-modern {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -515,4 +525,3 @@ input::placeholder, textarea::placeholder {
     border-width: 2px;
   }
 }
-
